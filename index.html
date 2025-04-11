@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sokhna Thiaw | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 1s ease-out forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .typed-text {
+            font-weight: 500;
+            color: #a67c52;
+        }
+
+        .cursor {
+            display: inline-block;
+            background-color: #a67c52;
+            width: 1px;
+            animation: blink 0.7s steps(1) infinite;
+        }
+
+        @keyframes blink {
+            0% { opacity: 1; }
+            50% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+<header class="header fade-in">
+    <a href="#" class="logo">Sokhna</a>
+    <i class='bx bx-menu' id="menu-icon"></i>
+    <nav class="navbar">
+        <a href="#" class="active">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<section class="home fade-in">
+    <div class="home-content">
+        <h1>Hi, I'm Sokhna Thiaw —</h1>
+        <h3><span class="typed-text"></span><span class="cursor">&nbsp;</span></h3>
+        <p>I'm a frontend developer with a passion for clean design, meaningful user experiences, and elegant code. With a background in computer science and customer experience, I bridge the gap between tech and people. I'm currently earning my AI and Machine Learning certificate from Columbia University, where I'm expanding my skills in data science and innovation. I love working on projects that challenge me to grow — creatively, technically, and collaboratively — and I'm excited to contribute to forward-thinking teams and mission-driven work.</p>
+        <div class="btn-box">
+            <a href="Sokhna_Thiaw.pdf" download>Hire Me</a>
+            <a href="mailto:sthiaw04@gmail.com">Let's Talk</a>
+        </div>
+    </div>
+
+    <div class="home-sci">
+        <a href="https://www.facebook.com/profile.php?id=100009190837868"><i class='bx bxl-facebook'></i></a>
+        <a href="https://www.linkedin.com/in/sokhna-thiaw-20041a16b/"><i class='bx bxl-linkedin'></i></a>
+        <a href="https://github.com/sthiaw04"><i class='bx bxl-github'></i></a>
+    </div>
+</section>
+
+<script>
+    const menuIcon = document.getElementById('menu-icon');
+    const navbar = document.querySelector('.navbar');
+    menuIcon.addEventListener('click', () => {
+        navbar.classList.toggle('active');
+    });
+
+    const typedTextSpan = document.querySelector(".typed-text");
+    const cursorSpan = document.querySelector(".cursor");
+
+    const textArray = ["Frontend Developer", "Creative Coder", "AI Enthusiast"];
+    let textArrayIndex = 0;
+    let charIndex = 0;
+
+    function type() {
+        if (charIndex < textArray[textArrayIndex].length) {
+            typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
+            charIndex++;
+            setTimeout(type, 100);
+        } else {
+            setTimeout(erase, 2000);
+        }
+    }
+
+    function erase() {
+        if (charIndex > 0) {
+            typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex - 1);
+            charIndex--;
+            setTimeout(erase, 50);
+        } else {
+            textArrayIndex++;
+            if (textArrayIndex >= textArray.length) textArrayIndex = 0;
+            setTimeout(type, 500);
+        }
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+        setTimeout(type, 1000);
+    });
+</script>
+
+</body>
+</html>
