@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Arrivals | Sokhna Retail</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <style>
+    .store-hero {
+      background-color: #f1eae3;
+      padding: 100px 10% 60px;
+      text-align: center;
+    }
+    .store-hero h1 {
+      font-size: 48px;
+      color: #5c4438;
+      margin-bottom: 10px;
+    }
+    .store-hero p {
+      font-size: 18px;
+      color: #7a6451;
+      margin-bottom: 30px;
+    }
+    .store-hero a {
+      background: #a67c52;
+      color: #fff;
+      padding: 12px 30px;
+      text-decoration: none;
+      font-weight: 500;
+      border-radius: 6px;
+      transition: background 0.3s;
+    }
+    .store-hero a:hover {
+      background: #8c684a;
+    }
+    .product-section {
+      padding: 60px 10%;
+    }
+    .product-section h2 {
+      font-size: 28px;
+      color: #5c4438;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
+    }
+    .product-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+      overflow: hidden;
+      text-align: center;
+      padding: 20px;
+    }
+    .product-card img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+    .product-card h3 {
+      font-size: 16px;
+      color: #5c4438;
+    }
+  </style>
+</head>
+<body>
+  <header class="header fade-in">
+    <a href="#" class="logo">Sokhna Retail</a>
+    <i class='bx bx-menu' id="menu-icon"></i>
+    <nav class="navbar">
+      <a href="#" class="active">Home</a>
+      <a href="#">Shop</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <section class="store-hero">
+    <h1>New Arrivals</h1>
+    <p>Check out our latest collection</p>
+    <a href="#">Shop Now</a>
+  </section>
+
+  <section class="product-section">
+    <h2>Featured Products</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="product1.jpg" alt="Product 1">
+        <h3>Soft Beige Tee</h3>
+      </div>
+      <div class="product-card">
+        <img src="product2.jpg" alt="Product 2">
+        <h3>Flowy Summer Dress</h3>
+      </div>
+      <div class="product-card">
+        <img src="product3.webp" alt="Product 3">
+        <h3>Neutral Knit Top</h3>
+      </div>
+      <div class="product-card">
+        <img src="product4.jpg" alt="Product 4">
+        <h3>Minimalist Linen Pants</h3>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const menuIcon = document.getElementById('menu-icon');
+    const navbar = document.querySelector('.navbar');
+    menuIcon.addEventListener('click', () => {
+      navbar.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>

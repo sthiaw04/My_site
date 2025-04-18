@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Retail Store UI | Sokhna Thiaw</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <style>
+    .project-detail {
+      padding: 120px 10% 60px;
+      max-width: 900px;
+      margin: auto;
+    }
+    .project-detail h2 {
+      font-size: 32px;
+      color: #5c4438;
+      margin-bottom: 20px;
+    }
+    .project-detail img {
+      width: 100%;
+      border-radius: 12px;
+      margin: 20px 0;
+    }
+    .project-detail p,
+    .project-detail li {
+      font-size: 16px;
+      color: #444;
+      line-height: 1.6;
+    }
+    .project-detail ul {
+      margin-top: 10px;
+      padding-left: 20px;
+    }
+    .project-detail .back-link {
+      display: inline-block;
+      margin-top: 30px;
+      color: #a67c52;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .project-detail .back-link:hover {
+      text-decoration: underline;
+    }
+
+
+  </style>
+</head>
+<body>
+  <header class="header fade-in">
+    <a href="index.html" class="logo">Sokhna</a>
+    <i class='bx bx-menu' id="menu-icon"></i>
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="project-detail fade-in">
+    <h2>Retail Store UI</h2>
+    <p>In this project I showcase a modern, responsive design for a fictional online fashion retail store. Created using HTML, CSS, as well as JavaScript, this layout is perfect for showcasing products in a clean and minimal way while keeping the user experience elegant and intuitive.</p>
+
+    <img src="retail-image.png" alt="Retail project screenshot">
+
+    <h3>Key Features</h3>
+    <ul>
+      <li>Fully responsive layout for desktop and mobile</li>
+      <li>Product grid with hover effects</li>
+      <li>Call-to-action buttons with smooth transitions</li>
+      <li>Placeholder sections for filtering and cart preview</li>
+    </ul>
+
+
+    <p>I can also easily expand this concept into a full eCommerce experience by integrating a backend (like Firebase or Django), dynamic product data, and payment integration with Stripe or PayPal.</p>
+    <div style="display: flex; gap: 300px; margin-top: 30px;">
+        <a class="back-link" href="index.html">← Back to Home</a>
+        <a class="back-link" href="store.html" target="_blank">View Live Site →</a>
+    </div>
+  </section>
+
+  <script>
+    const menuIcon = document.getElementById('menu-icon');
+    const navbar = document.querySelector('.navbar');
+    menuIcon.addEventListener('click', () => {
+      navbar.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
